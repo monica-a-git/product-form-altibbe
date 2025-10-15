@@ -1,6 +1,6 @@
 # app.py
 from flask import Flask, request, jsonify, send_from_directory, session # Import session
-from model_service import generate_questions_with_context # We'll rename our function
+from backend.model_service import generate_questions_with_context 
 import os
 
 app = Flask(__name__, static_folder='../frontend', static_url_path='')
@@ -52,4 +52,4 @@ def generate_question_route():
         return jsonify({"error": f"An unexpected error occurred: {e}"}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=10000, debug=False)

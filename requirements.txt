@@ -3,3 +3,7 @@ flask-cors
 torch
 transformers
 gunicorn
+Flask
+google-generativeai
+gunicorn
+flask-swagger-ui
