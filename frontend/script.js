@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatbotMessages = document.getElementById('chatbotMessages');
     const errorMessage = document.getElementById('errorMessage');
 
-    const BACKEND_URL = 'https://product-form-altibbe.onrender.com//generate-question';
-'; 
+    const BACKEND_URL = 'https://product-form-altibbe.onrender.com/generate-question';
+
 
     sendBtn.addEventListener('click', sendMessage);
     userInput.addEventListener('keypress', (e) => {
