@@ -2,10 +2,11 @@
 from flask import Flask, request, jsonify, send_from_directory, session # Import session
 from backend.model_service import generate_questions_with_context 
 import os
+from flask_cors import CORS
+
 
 app = Flask(__name__, static_folder='../frontend', static_url_path='')
-app.secret_key = 'your_super_secret_key_here' # REQUIRED for Flask sessions! Change this!
-
+CORS(app)
 # Dictionary to store conversation history for each session
 # In a real app, use a proper session management or database
 conversation_histories = {}
